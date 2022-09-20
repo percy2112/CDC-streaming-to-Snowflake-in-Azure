@@ -1,0 +1,27 @@
+{ 
+
+    "name": "pg-demo-src-connector", 
+
+    "config": { 
+
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector", 
+
+        "database.hostname": "[Postgres-HostName]", 
+
+        "database.port": "5432", 
+
+        "database.user": "[User-Name]", 
+
+        "database.password": "password", 
+
+        "database.dbname": "postgres", 
+
+        "database.server.name": "[db name]", 
+
+        "plugin.name": "wal2json", 
+
+        "table.whitelist": "public.[table_name]" 
+
+    } 
+
+}
