@@ -1,0 +1,17 @@
+Create a Postgres Database.
+IMP: FOR DATABASE, Account must have Replication permission and logical replication enabled
+Save the changes and restart the server to apply the replica or wal_level change.
+CLI Command to set the replication:
+1. az postgres server configuration set --resource-group mygroup --server-name myserver --name azure.replication_support --value logical
+
+2. az postgres server restart --resource-group mygroup --name myserver
+
+Confirm that your PostgreSQL instance allows network traffic from your connecting resource.
+###########################################################################
+SQL database  (Connect to database in cloud shell by below command) and modify required feilds
+
+psql --host=<host_name> --port=5432 --username=<user_name>  --dbname=<db_name> 
+
+Grant the admin user replication permissions.
+ALTER ROLE <adminname> WITH REPLICATION;
+You may want to make sure the role you are using has privileges on the schema that you are replicating. Otherwise, you may run into errors such as Permission denied for schema.
