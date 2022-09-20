@@ -1,0 +1,20 @@
+Prerequisite :
+############################################################
+Create a role or use existing one as applicable:
+create role <role name>; 
+grant usage on database <db name> to <role name>;
+grant usage on schema <schema name> to <role name>;
+grant create table on schema <schema name>  to <role name>;
+grant create stage on schema <schema name>  to role <role name>;
+grant create pipe on schema <schema name>  to role <role name>;
+create user <user name> password = ‘<password’ default_role = <role name>;
+grant role <role name> to user <user name>; 
+Create the RSA key( Public and Private keys):
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 aes256 -inform PEM -out rsa_key.p8 
+Enter the passphrase: streaming
+openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub 
+Note down public and private key 
+In snowflake execute below query: 
+alter user kafka_connector_user_1 set rsa_public_key= ‘<rsa_pubic_key_generated>’;
+To check the user details:
+Describe user <user name>; 
