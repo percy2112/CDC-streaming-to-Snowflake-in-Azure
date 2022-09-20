@@ -11,8 +11,8 @@ Debezium is a distributed platform that builds on top of Change Data Capture fea
 Prerequisite:
 
 Create an Event Hubs namespace - After the setup, please ensure that you keep the Connection String handy since you will need it to configure Kafka Connect.
-Setup and configure Azure Database for PostgreSQL - Please ensure that you keep the following PostgreSQL related information handy since you will need them to configure the Debezium Connector in the subsequent sections - database hostname (and port), username, password
-Snowflake Account 
+Setup and configure Azure Database for PostgreSQL - Please ensure that you keep the following PostgreSQL related information handy since you will need them to configure the Debezium Connector in the subsequent sections - database hostname (and port), username, password. please refer https://github.com/percy2112/CDC-streaming-to-Snowflake-in-Azure/blob/main/postgres_prerequisite_setup.txt
+Snowflake Setup: please refer instructions from file https://github.com/percy2112/CDC-streaming-to-Snowflake-in-Azure/blob/main/snowflake_prerequisite_setup.txt
 
 Configure PostgreSQL:
 
