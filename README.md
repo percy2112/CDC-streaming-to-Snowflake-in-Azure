@@ -1,5 +1,5 @@
 # CDC-streaming-to-Snowflake-in-Azure
-In this article, I will talk about Streaming Framework that will stream change data capture data to Snowflake in near Real Time by Kafka and Event Hub
+Streaming Framework that will stream change data capture data to Snowflake in near Real Time by Kafka and Event Hub
 
 Change Data Capture (CDC) is a technique used to track row-level changes in database tables in response to create, update and delete operations. Different databases use different techniques to expose these change data events - for example, logical decoding in PostgreSQL, MySQL binary log (binlog) etc. This is a powerful capability, but useful only if there is a way to tap into these event logs and make it available to other services which depend on that information.
 
